@@ -1,83 +1,225 @@
-<div class="ui">
+<!DOCTYPE html>
+<!-- saved from url=(0036)https://bsehovac.github.io/the-cube/ -->
+<html style="font-size: 3.4px;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-  <div class="ui__background"></div>
+  
+  <meta name="author" content="Boris Sehovac">
+  <meta name="description" content="See if you can solve this classic puzzle game.">
+  <meta name="viewport" content="width=device-width,height=device-height,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
 
-  <div class="ui__game"></div>
+  <title>The Cube - A Rubik's Cube Game</title>
+  <meta property="og:description" content="See if you can solve this classic puzzle game.">
+  <meta property="og:image" content="assets/icons/meta-image.png">
+  <meta property="og:site_name" content="The Cube - A Rubik&#39;s Cube Game">
+  <meta property="og:title" content="The Cube - A Rubik&#39;s Cube Game">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://bsehovac.github.io">
 
-  <div class="ui__texts">
-    <h1 class="text text--title">
-      <span>THE</span>
-      <span>CUBE</span>
-    </h1>
-    <div class="text text--note">
-      Double tap to start
-    </div>
-    <div class="text text--timer">
-      0:00
-    </div>
-    <div class="text text--complete">
-      <span>Complete!</span>
-    </div>
-    <div class="text text--best-time">
-      <icon trophy></icon>
-      <span>Best Time!</span>
-    </div>
-  </div>
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:creator" content="@BorisSehovac">
+  <meta name="twitter:title" content="The Cube - A Rubik&#39;s Cube Game">
+  <meta name="twitter:image" content="https://bsehovac.github.io/the-cube/assets/icons/twitter-card.png">
+  <meta name="twitter:description" content="See if you can solve this classic puzzle game.">
 
-  <div class="ui__prefs">
-    <range name="size" title="Cube Size" list="2,3,4,5"></range>
-    <range name="flip" title="Flip Type" list="Swift&nbsp;,Smooth,Bounce"></range>
-    <range name="scramble" title="Scramble Length" list="20,25,30"></range>
-    <range name="fov" title="Camera Angle" list="Ortographic,Perspective"></range>
-    <range name="theme" title="Color Scheme" list="Cube,Erno,Dust,Camo,Rain"></range>
-  </div>
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="The Cube">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="translucent-black">
 
-  <div class="ui__theme">
-    <range name="hue" title="Hue" color></range>
-    <range name="saturation" title="Saturation" color></range>
-    <range name="lightness" title="Lightness" color></range>
-  </div>
+  <link rel="apple-touch-icon" sizes="180x180" href="https://bsehovac.github.io/the-cube/assets/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://bsehovac.github.io/the-cube/assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://bsehovac.github.io/the-cube/assets/icons/favicon-16x16.png">
+  <link rel="manifest" href="https://bsehovac.github.io/the-cube/assets/icons/site.webmanifest">
+  <link rel="mask-icon" href="https://bsehovac.github.io/the-cube/assets/icons/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="https://bsehovac.github.io/the-cube/assets/icons/favicon.ico">
+  <meta name="theme-color" content="#ffffff">
 
-  <div class="ui__stats">
-    <div class="stats" name="cube-size">
-      <i>Cube:</i><b>3x3x3</b>
-    </div>
-    <div class="stats" name="total-solves">
-      <i>Total solves:</i><b>-</b>
-    </div>
-    <div class="stats" name="best-time">
-      <i>Best time:</i><b>-</b>
-    </div>
-    <div class="stats" name="worst-time">
-      <i>Worst time:</i><b>-</b>
-    </div>
-    <div class="stats" name="average-5">
-      <i>Average of 5:</i><b>-</b>
-    </div>
-    <div class="stats" name="average-12">
-      <i>Average of 12:</i><b>-</b>
-    </div>
-    <div class="stats" name="average-25">
-      <i>Average of 25:</i><b>-</b>
-    </div>
-  </div>
+  <link rel="stylesheet" type="text/css" href="./The Cube - A Rubik&#39;s Cube Game_files/styles.css">
 
-  <div class="ui__buttons">
-    <button class="btn btn--bl btn--stats">
-      <icon trophy></icon>
-    </button>
-    <button class="btn btn--br btn--prefs">
-      <icon settings></icon>
-    </button>
-    <button class="btn btn--bl btn--back">
-      <icon back></icon>
-    </button>
-    <button class="btn btn--br btn--theme">
-      <icon theme></icon>
-    </button>
-    <button class="btn btn--br btn--reset">
-      <icon reset></icon>
-    </button>
-  </div>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script type="text/javascript" async="" src="./The Cube - A Rubik&#39;s Cube Game_files/analytics.js.descarga"></script><script type="text/javascript" async="" src="./The Cube - A Rubik&#39;s Cube Game_files/js"></script><script async="" src="./The Cube - A Rubik&#39;s Cube Game_files/js(1)"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-128627708-1');
+  </script>
 
+  <script>
+    window.gameVersion = '0.99.2';
+  </script>
+
+</head>
+<body>
+
+  <div class="ui">
+
+    <div class="ui__background" style="background: rgb(209, 213, 219);"></div>
+
+    <div class="ui__game"><canvas width="723" height="605" style="width: 609px; height: 510px;"></canvas></div>
+
+    <div class="ui__texts">
+      <h1 class="text text--title" style="opacity: 1;">
+        <span><i style="opacity: 1; transform: rotate3d(0, 1, 0, 0deg);">T</i><i style="opacity: 1; transform: rotate3d(0, 1, 0, 0deg);">H</i><i style="opacity: 1; transform: rotate3d(0, 1, 0, 0deg);">E</i></span>
+        <span><i style="opacity: 1; transform: rotate3d(0, 1, 0, 0deg);">C</i><i style="opacity: 1; transform: rotate3d(0, 1, 0, 0deg);">U</i><i style="opacity: 1; transform: rotate3d(0, 1, 0, 0deg);">B</i><i style="opacity: 1; transform: rotate3d(0, 1, 0, 0deg);">E</i></span>
+      </h1>
+      <div class="text text--note" style="opacity: 0.806764;">
+        Double tap to start
+      </div>
+      <div class="text text--timer">
+        0:00
+      </div>
+      <div class="text text--complete">
+        <span>Complete!</span>
+      </div>
+      <div class="text text--best-time">
+        <svg class="icon" viewBox="0 0 576 512" style="width: 1.125em; height: 1em;"><path fill="currentColor" d="M552 64H448V24c0-13.3-10.7-24-24-24H152c-13.3 0-24 10.7-24 24v40H24C10.7 64 0 74.7 0 88v56c0 66.5 77.9 131.7 171.9 142.4C203.3 338.5 240 360 240 360v72h-48c-35.3 0-64 20.7-64 56v12c0 6.6 5.4 12 12 12h296c6.6 0 12-5.4 12-12v-12c0-35.3-28.7-56-64-56h-48v-72s36.7-21.5 68.1-73.6C498.4 275.6 576 210.3 576 144V88c0-13.3-10.7-24-24-24zM64 144v-16h64.2c1 32.6 5.8 61.2 12.8 86.2-47.5-16.4-77-49.9-77-70.2zm448 0c0 20.2-29.4 53.8-77 70.2 7-25 11.8-53.6 12.8-86.2H512v16zm-127.3 4.7l-39.6 38.6 9.4 54.6c1.7 9.8-8.7 17.2-17.4 12.6l-49-25.8-49 25.8c-8.8 4.6-19.1-2.9-17.4-12.6l9.4-54.6-39.6-38.6c-7.1-6.9-3.2-19 6.7-20.5l54.8-8 24.5-49.6c4.4-8.9 17.1-8.9 21.5 0l24.5 49.6 54.8 8c9.6 1.5 13.5 13.6 6.4 20.5z"></path></svg>
+        <span>Best Time!</span>
+      </div>
+    </div>
+
+    <div class="ui__prefs">
+      <div class="range" name="size">
+<div class="range__label">Cube Size</div>
+<div class="range__track">
+<div class="range__track-line"></div>
+<div class="range__handle" style="left: 33.3333%;"><div style="background: rgb(65, 170, 200);"></div></div>
 </div>
+<div class="range__list"><div>2</div><div>3</div><div>4</div><div>5</div></div>
+</div>
+      <div class="range" name="flip">
+<div class="range__label">Flip Type</div>
+<div class="range__track">
+<div class="range__track-line"></div>
+<div class="range__handle" style="left: 0%;"><div style="background: rgb(65, 170, 200);"></div></div>
+</div>
+<div class="range__list"><div>Swift&nbsp;</div><div>Smooth</div><div>Bounce</div></div>
+</div>
+      <div class="range" name="scramble">
+<div class="range__label">Scramble Length</div>
+<div class="range__track">
+<div class="range__track-line"></div>
+<div class="range__handle" style="left: 50%;"><div style="background: rgb(65, 170, 200);"></div></div>
+</div>
+<div class="range__list"><div>20</div><div>25</div><div>30</div></div>
+</div>
+      <div class="range" name="fov">
+<div class="range__label">Camera Angle</div>
+<div class="range__track">
+<div class="range__track-line"></div>
+<div class="range__handle" style="left: 18.6047%;"><div style="background: rgb(65, 170, 200);"></div></div>
+</div>
+<div class="range__list"><div>Ortographic</div><div>Perspective</div></div>
+</div>
+      <div class="range" name="theme">
+<div class="range__label">Color Scheme</div>
+<div class="range__track">
+<div class="range__track-line"></div>
+<div class="range__handle" style="left: 0%;"><div style="background: rgb(65, 170, 200);"></div></div>
+</div>
+<div class="range__list"><div>Cube</div><div>Erno</div><div>Dust</div><div>Camo</div><div>Rain</div></div>
+</div>
+    </div>
+
+    <div class="ui__theme">
+      <div class="range range--type-color range--color-hue" name="hue">
+<div class="range__label">Hue</div>
+<div class="range__track">
+<div class="range__track-line"></div>
+<div class="range__handle" style="left: 0%;"><div></div></div>
+</div>
+<div class="range__list"></div>
+</div>
+      <div class="range range--type-color range--color-saturation" name="saturation">
+<div class="range__label">Saturation</div>
+<div class="range__track">
+<div class="range__track-line"></div>
+<div class="range__handle" style="left: 100%;"><div></div></div>
+</div>
+<div class="range__list"></div>
+</div>
+      <div class="range range--type-color range--color-lightness" name="lightness">
+<div class="range__label">Lightness</div>
+<div class="range__track">
+<div class="range__track-line"></div>
+<div class="range__handle" style="left: 50%;"><div></div></div>
+</div>
+<div class="range__list"></div>
+</div>
+    </div>
+
+    <div class="ui__stats">
+      <div class="stats" name="cube-size">
+        <i>Cube:</i><b>3<i>x</i>3<i>x</i>3</b>
+      </div>
+      <div class="stats" name="total-solves">
+        <i>Total solves:</i><b>-</b>
+      </div>
+      <div class="stats" name="best-time">
+        <i>Best time:</i><b>-</b>
+      </div>
+      <div class="stats" name="worst-time">
+        <i>Worst time:</i><b>-</b>
+      </div>
+      <div class="stats" name="average-5">
+        <i>Average of 5:</i><b>-</b>
+      </div>
+      <div class="stats" name="average-12">
+        <i>Average of 12:</i><b>-</b>
+      </div>
+      <div class="stats" name="average-25">
+        <i>Average of 25:</i><b>-</b>
+      </div>
+    </div>
+
+    <div class="ui__buttons">
+      <button class="btn btn--bl btn--stats" style="transform: translate3d(0px, 0em, 0px); opacity: 1; pointer-events: all;">
+        <svg class="icon" viewBox="0 0 576 512" style="width: 1.125em; height: 1em;"><path fill="currentColor" d="M552 64H448V24c0-13.3-10.7-24-24-24H152c-13.3 0-24 10.7-24 24v40H24C10.7 64 0 74.7 0 88v56c0 66.5 77.9 131.7 171.9 142.4C203.3 338.5 240 360 240 360v72h-48c-35.3 0-64 20.7-64 56v12c0 6.6 5.4 12 12 12h296c6.6 0 12-5.4 12-12v-12c0-35.3-28.7-56-64-56h-48v-72s36.7-21.5 68.1-73.6C498.4 275.6 576 210.3 576 144V88c0-13.3-10.7-24-24-24zM64 144v-16h64.2c1 32.6 5.8 61.2 12.8 86.2-47.5-16.4-77-49.9-77-70.2zm448 0c0 20.2-29.4 53.8-77 70.2 7-25 11.8-53.6 12.8-86.2H512v16zm-127.3 4.7l-39.6 38.6 9.4 54.6c1.7 9.8-8.7 17.2-17.4 12.6l-49-25.8-49 25.8c-8.8 4.6-19.1-2.9-17.4-12.6l9.4-54.6-39.6-38.6c-7.1-6.9-3.2-19 6.7-20.5l54.8-8 24.5-49.6c4.4-8.9 17.1-8.9 21.5 0l24.5 49.6 54.8 8c9.6 1.5 13.5 13.6 6.4 20.5z"></path></svg>
+      </button>
+      <button class="btn btn--br btn--prefs" style="transform: translate3d(0px, 0em, 0px); opacity: 1; pointer-events: all;">
+        <svg class="icon" viewBox="0 0 512 512" style="width: 1em; height: 1em;"><path fill="currentColor" d="M444.788 291.1l42.616 24.599c4.867 2.809 7.126 8.618 5.459 13.985-11.07 35.642-29.97 67.842-54.689 94.586a12.016 12.016 0 0 1-14.832 2.254l-42.584-24.595a191.577 191.577 0 0 1-60.759 35.13v49.182a12.01 12.01 0 0 1-9.377 11.718c-34.956 7.85-72.499 8.256-109.219.007-5.49-1.233-9.403-6.096-9.403-11.723v-49.184a191.555 191.555 0 0 1-60.759-35.13l-42.584 24.595a12.016 12.016 0 0 1-14.832-2.254c-24.718-26.744-43.619-58.944-54.689-94.586-1.667-5.366.592-11.175 5.459-13.985L67.212 291.1a193.48 193.48 0 0 1 0-70.199l-42.616-24.599c-4.867-2.809-7.126-8.618-5.459-13.985 11.07-35.642 29.97-67.842 54.689-94.586a12.016 12.016 0 0 1 14.832-2.254l42.584 24.595a191.577 191.577 0 0 1 60.759-35.13V25.759a12.01 12.01 0 0 1 9.377-11.718c34.956-7.85 72.499-8.256 109.219-.007 5.49 1.233 9.403 6.096 9.403 11.723v49.184a191.555 191.555 0 0 1 60.759 35.13l42.584-24.595a12.016 12.016 0 0 1 14.832 2.254c24.718 26.744 43.619 58.944 54.689 94.586 1.667 5.366-.592 11.175-5.459 13.985L444.788 220.9a193.485 193.485 0 0 1 0 70.2zM336 256c0-44.112-35.888-80-80-80s-80 35.888-80 80 35.888 80 80 80 80-35.888 80-80z"></path></svg>
+      </button>
+      <button class="btn btn--bl btn--back">
+        <svg class="icon" viewBox="0 0 512 512" style="width: 1em; height: 1em;"><path transform="translate(512, 0) scale(-1,1)" fill="currentColor" d="M503.691 189.836L327.687 37.851C312.281 24.546 288 35.347 288 56.015v80.053C127.371 137.907 0 170.1 0 322.326c0 61.441 39.581 122.309 83.333 154.132 13.653 9.931 33.111-2.533 28.077-18.631C66.066 312.814 132.917 274.316 288 272.085V360c0 20.7 24.3 31.453 39.687 18.164l176.004-152c11.071-9.562 11.086-26.753 0-36.328z"></path></svg>
+      </button>
+      <button class="btn btn--br btn--theme">
+        <svg class="icon" viewBox="0 0 512 512" style="width: 1em; height: 1em;"><path fill="currentColor" d="M204.3 5C104.9 24.4 24.8 104.3 5.2 203.4c-37 187 131.7 326.4 258.8 306.7 41.2-6.4 61.4-54.6 42.5-91.7-23.1-45.4 9.9-98.4 60.9-98.4h79.7c35.8 0 64.8-29.6 64.9-65.3C511.5 97.1 368.1-26.9 204.3 5zM96 320c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm32-128c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm128-64c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm128 64c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32z"></path></svg>
+      </button>
+      <button class="btn btn--br btn--reset">
+        <svg class="icon" viewBox="0 0 512 512" style="width: 1em; height: 1em;"><path fill="currentColor" d="M370.72 133.28C339.458 104.008 298.888 87.962 255.848 88c-77.458.068-144.328 53.178-162.791 126.85-1.344 5.363-6.122 9.15-11.651 9.15H24.103c-7.498 0-13.194-6.807-11.807-14.176C33.933 94.924 134.813 8 256 8c66.448 0 126.791 26.136 171.315 68.685L463.03 40.97C478.149 25.851 504 36.559 504 57.941V192c0 13.255-10.745 24-24 24H345.941c-21.382 0-32.09-25.851-16.971-40.971l41.75-41.749zM32 296h134.059c21.382 0 32.09 25.851 16.971 40.971l-41.75 41.75c31.262 29.273 71.835 45.319 114.876 45.28 77.418-.07 144.315-53.144 162.787-126.849 1.344-5.363 6.122-9.15 11.651-9.15h57.304c7.498 0 13.194 6.807 11.807 14.176C478.067 417.076 377.187 504 256 504c-66.448 0-126.791-26.136-171.315-68.685L48.97 471.03C33.851 486.149 8 475.441 8 454.059V320c0-13.255 10.745-24 24-24z"></path></svg>
+      </button>
+    </div>
+
+  </div>
+
+  <script src="./The Cube - A Rubik&#39;s Cube Game_files/three.js.descarga"></script>
+  <script src="./The Cube - A Rubik&#39;s Cube Game_files/cube.js.descarga"></script>
+
+  <script src="./The Cube - A Rubik&#39;s Cube Game_files/upup.min.js.descarga"></script>
+  <script>
+    if (UpUp !== null) {
+      UpUp.start({
+        'cache-version': window.gameVersion,
+        'content-url': 'index.html',
+        'assets': [ 'assets/css/styles.css', 'assets/js/three.js', 'assets/js/cube.js' ]
+      });
+    }
+  </script>
+
+
+
+<div id="volume-booster-visusalizer">
+                    <div class="sound">
+                        <div class="sound-icon"></div>
+                        <div class="sound-wave sound-wave_one"></div>
+                        <div class="sound-wave sound-wave_two"></div>
+                        <div class="sound-wave sound-wave_three"></div>
+                    </div>
+                    <div class="segments-box">
+                        <div data-range="1-20" class="segment"><span></span></div>
+                        <div data-range="21-40" class="segment"><span></span></div>
+                        <div data-range="41-60" class="segment"><span></span></div>
+                        <div data-range="61-80" class="segment"><span></span></div>
+                        <div data-range="81-100" class="segment"><span></span></div>
+                    </div>
+                </div></body></html>
